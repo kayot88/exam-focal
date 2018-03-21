@@ -1,0 +1,143 @@
+//font-family: 'Damion', cursive;
+//font-family: 'Lato', sans-serif;
+	body{
+		position: relative;
+		font: 400 14px/1 Lato, sans-serif;
+		color: $base-text-color;
+		overflow-x: hidden;
+		&.hidden {
+			overflow: hidden;
+		}
+		* {	outline: none;}
+	}
+	/* Layout */
+	.ba-container{
+		margin: 0 auto;
+		max-width: 100vw;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	/* Typography */
+button,
+input[type='submit'] {
+    cursor: pointer;
+    @include transition(0.4s);
+    background: transparent;
+    border: 1px solid $base-text-color;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+	input[type="submit"],
+	input[type="button"],
+	button,
+	.ba-button{
+		display: inline-block;
+	}
+	input[type="submit"]:hover,
+	input[type="button"]:hover,
+	button:hover,
+	.ba-button:hover{
+
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="number"],
+	input[type="tel"],
+	textarea,
+	select {
+
+    @include transition(0.4s);
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="password"]:focus,
+	input[type="number"]:focus,
+	input[type="tel"]:focus,
+	textarea:focus,
+	select:focus {
+
+	}
+	textarea {
+		outline: none;
+		color: $base-text-color;
+		&:focus {
+			color: $base-text-color;
+		}
+	}
+	input {
+		outline: none;
+		@include transition(0.4s);
+	}
+	input[type='submit'] {
+		cursor: pointer;
+		@include transition(0.4s);
+		background: transparent;
+		border: 1px solid $base-text-color;
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: $base-text-color;
+		cursor: pointer;
+		@include transition(0.4s);
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.hidden {
+		opacity: 0;
+	}
+
+	.visible {
+		opacity: 1;
+	}
+.img-cover {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    @supports (object-fit: cover) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.section__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.button-up {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    color: $white;
+    border: 1px solid $white;
+    background-color: rgba(25, 111, 192, 0.3);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    z-index: 10;
+    &.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    &:hover {
+        // border-color: $green;
+        background-color: rgba(25, 111, 192, 0.7);
+        // color: $green;
+    }
+}

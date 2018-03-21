@@ -1,0 +1,258 @@
+	.ba-home{
+		position: relative;
+		//min-height: 850px;
+		top: -30px;
+	}
+	.ba-topline{
+		min-height: 100px;
+		margin-top: 30px;
+		// background-color: red;
+		&__icon{
+			font-family: Montserrat;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 48px;
+			text-transform: uppercase;
+			color: black;			
+		}
+		&__link{
+			color: $main;		
+			&:hover{
+				color: $navy;
+				text-decoration: none;
+			}
+		}
+	}
+	.ba-home{
+		//height: 100vh;
+		background: #e7e7e7 url(/img/bg-main.png) top center no-repeat;
+		background-size: cover;
+
+
+	}
+	.nav {
+		width: 100vw;
+		height: 100vh;
+		display: block;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		background: $navy;
+		color: #333;
+		pointer-events: none;
+		-webkit-clip-path: circle(0px at 98% 5px);
+		transition: all 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	}
+
+	.nav.open {
+		transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+		pointer-events: all;
+		-webkit-clip-path: circle(900px at 60% 275px);
+		z-index: 10000;
+
+
+	}
+	.nav.open .interior ul li a {
+		animation: fadeIn 0.6s ease 0.3s;
+		animation-fill-mode: forwards;
+	}
+
+	.nav.open .interior ul li:nth-child(2) a {
+		animation-delay: 0.4s;
+	}
+
+	.nav.open .interior ul li:nth-child(3) a {
+		animation-delay: 0.5s;
+	}
+
+	.nav-toggle {
+		cursor: pointer;
+		//position: fixed;
+		top: 15px;
+		right: 15px;
+		width: 80px;
+		text-align: center;
+		right: 0;
+		padding: 20px 0;
+		text-transform: uppercase;
+		font-weight: 800;
+		color: $main;
+		background: transparent;
+		&:hover{
+			color: $navy;
+		}
+	}
+
+	.interior {
+		position: fixed;
+		left: 0;
+		color: $main;
+		text-align: left;
+		top: 0;
+		width: 90%;
+		padding: 40px 5%;
+	}
+	.interior h2 {
+		border-bottom: solid 1px $main;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+	}
+	.interior ul {
+		list-style: none;
+		padding: 0;
+	}
+	.interior ul li a {
+		color: $main;
+		text-decoration: none;
+		display: block;
+		padding: 35px 35px 35px 0;
+		font-size: 2em;
+		font-weight: 100;
+		opacity: 0;
+		transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+	}
+	.interior ul li a:hover {
+		padding-left: 35px;
+		border-left: 6px $main solid;
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+			transform: translate3d(40px, 0, 0);
+		}
+		100% {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	.btn-crazy       {
+		position: absolute;
+		color: #fff;
+		background-color: $navy;
+		// top: 30px;
+		// left: 35%;
+		margin-right: 15px;
+		bottom: -20px;
+		right: 0;
+		width: 165px;
+		height: 60px;
+		transition: 0.5s ease all;
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 48px;
+		text-transform: uppercase;
+		border: none ;
+		border-radius: 0;
+		&:hover{
+			color: $navy;
+			background-color: #fff
+		}
+
+	}
+
+	#container {
+		/* This will come into play later */
+		perspective: 40px;
+		left: 0;
+		bottom: -100px;
+		position: absolute;
+		transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+	}
+
+	#container.open{
+		z-index: -1;	
+		transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+	}
+	#inner {
+		left: 0;
+		bottom: 0;
+		width: 458px;
+		height: 400px;
+		background-color: white;
+		transition: transform 0.5s;
+		background: url(/img/bear.jpg) center center;
+		background-size: cover;
+	}
+	.container{
+		//height: 100vh;
+		min-height: 850px;
+		position: relative;
+	}	
+	.ba-container{
+		//position: relative;
+	}
+	.top_title{
+		&--main{
+			//height: 100px;
+			margin-top: 125px;
+		}
+		&--h1{
+			padding: 25px 35px;
+			margin-top: 20px;
+			color: $main;
+			font-family: Montserrat;
+			font-size: 48px;
+			font-weight: 700;
+			line-height: 48px;
+			text-transform: uppercase;
+			border: 10px solid $main;
+			position: relative;
+			&:before{
+				position: absolute;
+				min-width: 100px;	
+				content: 'we`re';
+				background-color: $navy;
+				color: #60606e;
+				font-family: Montserrat;
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 36px;
+				text-transform: uppercase;
+				top: -46px;
+				left: 32%;
+				transform: translateX(50%);
+			}
+		}
+		&--text{
+			margin-top: 30px;
+			color: $main;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+		}
+	}
+
+
+	.nav-toggle--open {
+		position: fixed;
+	}
+	.ba-bear{
+		//position: relative;
+		//margin-top: 125px;
+	}
+
+	.ba-title--small{
+		color: $main;
+		font-family: Montserrat;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 48px;
+		text-transform: uppercase;
+	}
+	.top_title--longtext{
+		color: $main;
+		font-family: OpenSans;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+	.ba-history{
+		@include display-flex(column, center, right);
+		margin-top: 100px;
+	}

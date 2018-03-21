@@ -1,0 +1,44 @@
+canvas {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 100px;
+}
+
+.scene-nav {
+	font-size: 1.15em;
+	position: fixed;
+	top: 0;
+	transform: translateY(-50%);
+	z-index: 10;
+	background: none;
+	border: 0;
+	right: 0;
+	padding: 1.5em;
+	color: var(--color-nav);
+/*
+	position: relative;*/
+}
+
+.scene-nav:focus {
+	outline: none;
+}
+
+.scene-nav--prev {
+	left: 0;
+	top: 50%;
+	position: absolute;
+}
+.scene-nav--next {
+	top: 50%;
+	position: absolute;
+}
+
+.slide-wrapper {
+	display: none;
+}
+
+.icon--arrow-nav-next {
+	transform: rotate(-180deg);
+
+}
